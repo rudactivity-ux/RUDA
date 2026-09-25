@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --primary: #059669; /* Electric Emerald */
+  --primary-hover: #047857; /* Deep Emerald */
+  --primary-light: #ecfdf5; /* Emerald 50 */
+  --primary-glow: rgba(16, 185, 129, 0.35);
+  --secondary: #8b5cf6; /* Cyber Amethyst */
+  --accent: #10b981; /* Radiant Mint */
+  --background: #f8fafc;
+  --surface: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+.dark {
+  --background: #090d14;
+  --surface: #101622;
+  --primary: #10b981;
+  --primary-hover: #34d399;
+  --primary-light: rgba(6, 78, 59, 0.4);
+  --primary-glow: rgba(52, 211, 153, 0.3);
+  --secondary: #a78bfa;
+  --accent: #34d399;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border: #1e293b;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Custom slick scrollbars for chat and feeds */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.45);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+/* TikTok Heart Burst Animation */
+@keyframes tiktokHeartPop {
+  0% {
+    transform: translate(-50%, -50%) scale(0) rotate(-15deg);
+    opacity: 0;
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1.3) rotate(0deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(8deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(-50%, -85%) scale(1.4) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.animate-tiktok-heart {
+  animation: tiktokHeartPop 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* TikTok Rotating Vinyl Disc */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 5s linear infinite;
+}
+
+/* High-Tech Pulse Glow */
+@keyframes techPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
+  }
+}
+
+.tech-glow {
+  animation: techPulse 3s ease-in-out infinite;
+}
+
